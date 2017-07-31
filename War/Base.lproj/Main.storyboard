@@ -53,11 +53,17 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-Ww-MfX">
-                                        <rect key="frame" x="130.5" y="297" width="82" height="31"/>
+                                        <rect key="frame" x="130.5" y="297" width="82" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="ofA-Vk-JC3"/>
+                                        </constraints>
                                         <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDA-4r-eBr"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Veh-tb-G7G" userLabel="ScoreLabelStackView">
-                                        <rect key="frame" x="66" y="358" width="211" height="289"/>
+                                        <rect key="frame" x="66" y="397" width="211" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qRF-CK-CFP" userLabel="LeftScoreLabelStackView">
                                                 <rect key="frame" x="0.0" y="0.0" width="55.5" height="72"/>
@@ -94,8 +100,20 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="bAU-YE-hwn"/>
+                                        </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rV-qM-3hm">
+                                        <rect key="frame" x="135.5" y="517" width="72.5" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Veh-tb-G7G" firstAttribute="top" secondItem="AEd-Ww-MfX" secondAttribute="bottom" constant="20" id="2WZ-2c-ZfZ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,6 +133,7 @@
                         <outlet property="leftScoreLabel" destination="foc-nr-Gt6" id="v2W-KT-SKr"/>
                         <outlet property="rightImageView" destination="SVf-SJ-0KL" id="3XN-ud-XB2"/>
                         <outlet property="rightScoreLabel" destination="tgo-Oc-bHP" id="8wi-Pp-Y1o"/>
+                        <outlet property="winnerLabel" destination="1rV-qM-3hm" id="qtI-5g-Uvs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
